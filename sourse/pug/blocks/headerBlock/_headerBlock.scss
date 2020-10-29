@@ -126,7 +126,10 @@
 
 	.section-title{
 		&__top-txt{
-			margin-bottom: rem(28);
+			margin-bottom: rem(18);
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(28);
+			}
 			@include media-breakpoint-up(xxl){
 				margin-right: rem(-40px);
 			}
@@ -136,8 +139,10 @@
 			font-weight: 300;
 
 			font-size: rem(24px);
+			margin-bottom: rem(18);
 			@include media-breakpoint-up(sm){
 				font-size: rem(35px);
+				margin-bottom: rem(20);
 			}
 			@include media-breakpoint-up(xl){
 				font-size: rem(40px);
@@ -145,7 +150,6 @@
 			line-height: 1.2;
 			letter-spacing: rem(4px);
 			text-transform: uppercase;
-			margin-bottom: rem(20);
 			b{
 				font-weight: bold;
 			}
@@ -156,8 +160,10 @@
 	}
 
 	&__lower-cont{
+		display: flex;
+		flex-direction: column-reverse;
 		@include media-breakpoint-up(sm){
-			display: flex;
+			flex-direction: row;
 		}
 		@include media-breakpoint-up(lg){
 			display: block;

@@ -89,6 +89,25 @@ a {
 	}
 }
 
+//
+.leadbox_window{
+	.ld_content_wrapper .ld_close{
+		@include media-breakpoint-down(lg){
+			display: none!important;
+		}
+	}
+	.time__block{
+		.tmr_el_val{
+			border: 1px solid $blue;
+			background-color: rgba($primary-light2, .1);
+			padding: 0!important;
+		}
+		.tmr_el_unit{
+			color: $body-color;
+		}
+	}
+}
+
 
 // 
 @include media-breakpoint-up(xl) {}
