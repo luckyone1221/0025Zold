@@ -1,0 +1,24 @@
+mixin sTopSlider(data)
+	// start sTopSlider
+	+b.sTopSlider.section#sTopSlider&attributes(attributes)
+		+e.container.container
+			+e.slider
+				.swiper-container.top-slider-js
+					.swiper-wrapper
+						+topSlide(1)
+						+topSlide(1)
+						+topSlide(1)
+						+topSlide(1)
+						+topSlide(1)
+				+b.top-sl-prev--js.d-none.d-lg-block
+					+icon('chevron-left')
+				+b.top-sl-next--js.d-none.d-lg-block
+					+icon('chevron-right')
+				+b.top-sl-pugin--js
+	// end sTopSlider
+
+mixin topSlide(imgNum)
+	.swiper-slide
+		+e.img-cont(href=`img/@2x/top-slider-${imgNum}.png` data-fancybox="topSliderImgs")
+			+e.img
+				img.swiper-lazy(src="#" data-src=`img/@2x/top-slider-${imgNum}.png` alt="")

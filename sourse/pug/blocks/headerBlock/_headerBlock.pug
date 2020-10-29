@@ -1,10 +1,37 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
-	// end headerBlock
+		+pic('header-big-bg.jpg')(class="headerBlock__big-bg")
+		+e.top-bg
+			img(src="img/svg/header-top-bg.svg" alt="")
+		+e.pc-img.d-none.d-xl-block
+			img(src="img/@2x/header-desctop-pc2.png" alt="")
+		+e.container.container
+			+e.row
+				+e.mob-pc.d-none.d-lg-flex.d-xl-none
+					img(src="img/@2x/pc-transparent.png" alt="")
+				+e.content
+					+b.section-title
+						+e.top-txt Пошаговый онлайн-курс + торговая стратегия для начинающих
+						h2
+							b Стань
+							|
+							| успешным
+							br
+							| FOREX−
+							b трейдером
+							br
+							| за 1 вечер
+						p Введите емейл и получите пошаговый онлайн-курс, который помог сотням простых домохозяек, пенсионеров, крупных бизнесменов и чиновников научиться зарабатывать на FOREX
+					+e.lower-cont
+						+e.xs-mob-pc.d-lg-none
+							img(src="img/@2x/pc-transparent.png" alt="")
+						+e.btn-and-time
+							+e.btn-cont
+								+e.A.btn(href='#') Успейте получить бесплатно
+							+b.timer-box.timer-box-js
+								span.days 12
+								span.hours 20
+								span.minutes 20
+								span.seconds 20
+		// end headerBlock

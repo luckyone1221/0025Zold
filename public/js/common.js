@@ -1,5 +1,11 @@
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -246,17 +252,17 @@ function eventHandler() {
 
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
+	JSCCommon.tabscostume('tabs'); //JSCCommon.mobileMenu();
+
 	JSCCommon.inputMask();
-	JSCCommon.sendForm();
-	JSCCommon.heightwindow();
+	JSCCommon.sendForm(); //JSCCommon.heightwindow();
+
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '01.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -304,6 +310,103 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyone js
+	//tiktak
+
+	function tikTak(parentQselector) {
+		//html elements
+		var parents = document.querySelectorAll(parentQselector);
+
+		var _iterator = _createForOfIteratorHelper(parents),
+				_step;
+
+		try {
+			for (_iterator.s(); !(_step = _iterator.n()).done;) {
+				var parent = _step.value;
+				if (!parent) return;
+				var days = parent.querySelector('.days');
+				var hours = parent.querySelector('.hours');
+				var minutes = parent.querySelector('.minutes');
+				var seconds = parent.querySelector('.seconds'); //date elements
+
+				var now = new Date(); // d === days.innerHtml + now.getDate... others the same way
+
+				var d = getTime(days, now.getDate());
+				var h = getTime(hours, now.getHours());
+				var m = getTime(minutes, now.getMinutes());
+				var s = getTime(seconds, now.getSeconds());
+				var targetDate = new Date(now.getFullYear(), now.getMonth(), d, h, m, s); //force date
+				//let targetDate = new Date(2020, 7,21);
+				//interval
+
+				tikTakReadOut(parent, targetDate, ThisReadOutID, days, hours, minutes, seconds);
+				var ThisReadOutID = window.setInterval(tikTakReadOut.bind(null, parent, targetDate, ThisReadOutID, days, hours, minutes, seconds), 1000);
+			}
+		} catch (err) {
+			_iterator.e(err);
+		} finally {
+			_iterator.f();
+		}
+	}
+
+	tikTak('.timer-box-js'); //additional funcs to tikTak
+
+	function tikTakReadOut(parent, targetDate, ReadOutID, days, hours, minutes, seconds) {
+		var now = new Date();
+		var timeLeft = (targetDate - now) / 1000;
+
+		if (timeLeft < 1) {
+			window.clearInterval(ReadOutID); //to do something after timer ends
+
+			$(parent).fadeOut();
+		}
+
+		days.innerHTML = Math.floor(timeLeft / 60 / 60 / 24);
+		timeLeft = (timeLeft / 60 / 60 / 24 - Math.floor(timeLeft / 60 / 60 / 24)) * 60 * 60 * 24;
+		hours.innerHTML = Math.floor(timeLeft / 60 / 60);
+		timeLeft = (timeLeft / 60 / 60 - Math.floor(timeLeft / 60 / 60)) * 60 * 60;
+		minutes.innerHTML = Math.floor(timeLeft / 60);
+		timeLeft = (timeLeft / 60 - Math.floor(timeLeft / 60)) * 60;
+		seconds.innerHTML = Math.floor(timeLeft);
+	}
+
+	function getTime(htmlEl, currentTimeItem) {
+		var timeItem = Number(htmlEl.innerHTML);
+
+		if (timeItem) {
+			timeItem += currentTimeItem;
+		} else {
+			timeItem = currentTimeItem;
+		}
+
+		return timeItem;
+	} //top slider
+
+
+	var topSlider = new Swiper('.top-slider-js', {
+		spaceBetween: 30,
+		loop: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2
+		},
+		navigation: {
+			prevEl: '.top-sl-prev--js',
+			nextEl: '.top-sl-next--js'
+		},
+		pagination: {
+			el: '.top-sl-pugin--js',
+			type: 'bullets',
+			clickable: true
+		}
+	}); //sProggramm
+
+	$('.prog-item-js').click(function () {
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.prog-content-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //end juckyone js
 }
 
 ;

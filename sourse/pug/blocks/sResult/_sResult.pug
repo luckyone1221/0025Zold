@@ -1,0 +1,22 @@
+mixin sResult(data)
+	// start sResult
+	+b.SECTION.sResult.section#sResult&attributes(attributes)
+		.container
+			+b.section-title
+				h2
+					span Какой результат Вы получите, изучив онлайн-курс
+					b «Стань трейдером»
+			+e.row.row
+				+resultItem(1, 'Вы сможете', 'открыть учебный счёт, установить и настроить торговый терминал')
+				+resultItem(2, 'Вы научитесь', 'работать в торговом терминале и совершать сделки')
+				+resultItem(3, 'Вы получите', 'простую торговую систему, которая приведёт Вас к первой прибыли на рынке FOREX')
+	// end sResult
+
+mixin resultItem(imgNum, title, txt)
+	+e.col.col-md-4
+		+e.item
+			+e.img
+				img(loading="lazy" src=`img/svg/result-${imgNum}.svg` alt="")
+			+e.txt-cont
+				+e.title=title
+				+e.txt=txt

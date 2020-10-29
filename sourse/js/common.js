@@ -234,17 +234,17 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
+	//JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
-	JSCCommon.heightwindow();
+	//JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '01.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -304,7 +304,103 @@ function eventHandler() {
 	});
 	// modal window
 
-	
+	//luckyone js
+
+	//tiktak
+	function tikTak(parentQselector){
+		//html elements
+		let parents = document.querySelectorAll(parentQselector);
+		for (let parent of parents) {
+			if (!parent) return
+
+			let days = parent.querySelector('.days');
+			let hours = parent.querySelector('.hours');
+			let minutes = parent.querySelector('.minutes');
+			let seconds = parent.querySelector('.seconds');
+
+
+
+			//date elements
+			let now = new Date();
+
+			// d === days.innerHtml + now.getDate... others the same way
+			let d = getTime(days, now.getDate());
+			let h = getTime(hours, now.getHours());
+			let m = getTime(minutes, now.getMinutes());
+			let s = getTime(seconds, now.getSeconds());
+
+			let targetDate = new Date(now.getFullYear(), now.getMonth(), d, h, m, s);
+			//force date
+			//let targetDate = new Date(2020, 7,21);
+
+
+			//interval
+			tikTakReadOut(parent, targetDate, ThisReadOutID, days, hours, minutes, seconds);
+			let ThisReadOutID = window.setInterval(tikTakReadOut.bind(null,parent, targetDate, ThisReadOutID, days, hours, minutes, seconds), 1000);
+		}
+	}
+	tikTak('.timer-box-js');
+	//additional funcs to tikTak
+
+	function tikTakReadOut(parent,targetDate, ReadOutID, days, hours, minutes, seconds){
+		let now = new Date();
+		let timeLeft = (targetDate - now) / 1000;
+
+		if (timeLeft < 1) {
+			window.clearInterval(ReadOutID);
+			//to do something after timer ends
+			$(parent).fadeOut();
+		}
+
+		days.innerHTML = Math.floor(timeLeft / 60 / 60 / 24);
+		timeLeft = ((timeLeft / 60 / 60 / 24) - Math.floor(timeLeft / 60 / 60 / 24)) * 60 * 60 * 24;
+
+		hours.innerHTML = Math.floor(timeLeft / 60 / 60);
+		timeLeft = ((timeLeft / 60 / 60) - Math.floor(timeLeft / 60 / 60)) * 60 * 60;
+
+		minutes.innerHTML = Math.floor((timeLeft / 60));
+		timeLeft = ((timeLeft / 60) - Math.floor((timeLeft / 60))) * 60;
+
+		seconds.innerHTML = Math.floor(timeLeft);
+	}
+
+	function getTime(htmlEl, currentTimeItem) {
+		let timeItem = Number(htmlEl.innerHTML);
+		if (timeItem) {
+			timeItem += currentTimeItem;
+		}
+		else {
+			timeItem = currentTimeItem;
+		}
+		return timeItem
+	}
+	//top slider
+	let topSlider = new Swiper('.top-slider-js', {
+		spaceBetween: 30,
+		loop: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+		navigation: {
+			prevEl: '.top-sl-prev--js',
+			nextEl: '.top-sl-next--js',
+		},
+		pagination: {
+			el: '.top-sl-pugin--js',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+	//sProggramm
+	$('.prog-item-js').click(function (){
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.prog-content-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	});
+
+	//end juckyone js
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -1,0 +1,27 @@
+mixin sQuestion(data)
+	// start sQuestion
+	+b.SECTION.sQuestion.section#sQuestion&attributes(attributes)
+		+e.bg-main
+			img(loading="lazy" src="img/@2x/question-city-2.jpg" alt="")
+		+e.top-bg
+			img(loading="lazy" src="img/svg/queston-top-bg.svg" alt="")
+		+e.top-bg-tp
+			img(loading="lazy" src="img/svg/queston-top-tp-bg.svg" alt="")
+		+e.bot-bg
+			img(loading="lazy" src="img/svg/queston-bot-bg.svg" alt="")
+		+e.bot-bg-tp
+			img(loading="lazy" src="img/svg/queston-bot-tp-bg.svg" alt="")
+		.container
+			+e.row
+				+b.section-title
+					h2 Хотите стать трейдером за 1 вечер?
+				+e.timer-col
+					+b.timer-box.timer-box-js
+						span.days 12
+						span.hours 20
+						span.minutes 20
+						span.seconds 20
+					+e.btn-cont
+						+e.A.btn(href='#') Получить бесплатный доступ
+
+	// end sQuestion

@@ -1,0 +1,25 @@
+mixin sMainThings(data)
+	// start sMainThings
+	+b.SECTION.sMainThings.section#sMainThings&attributes(attributes)
+		+e.bg
+			img(loadin="lazy" src="img/svg/sMainThings-bg.svg" alt="")
+		.container
+			+b.section-title
+				p И самое главное…
+				+e.mirror-title
+					h2 Никакой рекламы
+					.mirror-txt(data-mirror='Никакой рекламы') Никакой рекламы
+			+e.txt
+				p В онлайн-курсе «Стань трейдером» мы не рекламируем брокеров и не заставляем Вас покупать наши платные продукты.
+				p Информация, соизмеримая по ценности с нашим онлайн-курсом, обойдётся Вам в других местах в несколько десятков тысяч рублей. Но информацию, содержащуюся в курсе «Стань трейдером», Вы не сможете получить нигде и ни за какие деньги!
+				br
+				p Онлайн-курс «Стань трейдером» – это очень простой подход к заработку на FOREX. Он доступен абсолютно всем, независимо от пола, возраста, профессии, умственных способностей и какой-либо подготовки.
+			+e.readout-cont
+				+e.A.btn(href='#') Получить бесплатный доступ
+				+b.timer-box.timer-box-js
+					span.days 12
+					span.hours 20
+					span.minutes 20
+					span.seconds 20
+
+	// end sMainThings

@@ -3,6 +3,22 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sWriteNow/_sWriteNow.pug
+include ../blocks/sTopSlider/_sTopSlider.pug
+include ../blocks/sAdvantage/_sAdvantage.pug
+include ../blocks/sMainThings/_sMainThings.pug
+include ../blocks/sProgram/_sProgram.pug
+include ../blocks/sResult/_sResult.pug
+include ../blocks/sResult/_sResult.pug
+include ../blocks/sDesire/_sDesire.pug
+include ../blocks/sQuestion/_sQuestion.pug
+include ../blocks/sAuthor/_sAuthor.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sMoney/_sMoney.pug
+include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sGain/_sGain.pug
+include ../blocks/sLook/_sLook.pug
+include ../blocks/sWant/_sWant.pug
 
 block variables
 	- let  mainPage= null
@@ -10,15 +26,20 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-
-	+mob-mnu()
-	+header()
-	+top-nav()
-	+topLine() 
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sWriteNow()
+	+sTopSlider()
+	+sAdvantage()
+	+sMainThings()
+	+sProgram()
+	+sResult()
+	+sDesire()
+	+sQuestion()
+	+sAuthor()
+	+sFeedBack()
+	+sMoney()
+	+sWhy()
+	+sGain()
+	+sLook()
+	+sWant()
 	+footer()
-
-
-	

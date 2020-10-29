@@ -1,0 +1,32 @@
+mixin sWant(data)
+	// start sWant
+	+b.SECTION.sWant.section#sWant&attributes(attributes)
+		+e.bg-main
+			img(loading="lazy" src='img/@2x/foot-big-bg2.jpg' alt="")
+		+e.bg-top
+			img(loading="lazy" src='img/svg/footer-bl-top-bg.svg' alt="")
+		+e.top-rain
+			img(loading="lazy" src='img/svg/footer-bl-top-rain.svg' alt="")
+		+e.bg-bot
+			img(loading="lazy" src='img/svg/footer-bl-bot-bg.svg' alt="")
+		+e.bot-rain
+			img(loading="lazy" src='img/svg/footer-bl-bot-rain.svg' alt="")
+		.container
+			.row
+				+e.title-col.col-md-5
+					+b.section-title
+						h2
+							| Хотите
+							|
+							br.d-none.d-md-block
+							| так же?
+				+e.timer-col.col-md-7
+					+b.timer-box.timer-box-js
+						span.days 12
+						span.hours 20
+						span.minutes 20
+						span.seconds 20
+					+e.btn-cont
+						+e.A.btn(href='#') Приступайте к обучению!
+
+	// end sWant

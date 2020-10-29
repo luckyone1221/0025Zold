@@ -1,0 +1,29 @@
+mixin sWriteNow(data)
+	// start sWriteNow
+	+b.SECTION.sWriteNow.section#sWriteNow&attributes(attributes)
+		.container
+			+e.strip
+				+b.section-title
+					h2
+						| Прямо сейчас узнайте всё,
+						br
+						| что необходимо для Вашего
+						br
+						| быстрого старта в заработке
+						br
+						| На рынке
+						|
+						span.green FOREX!
+				+e.portrait
+					img(loading="lazy" src="img/@2x/write-now-portrait.png")
+				+e.bg-strip--sm
+				+e.bg-strip--md
+				+e.bg-strip--lg
+				+e.txt
+					+e.txt-rims
+						span.far
+						span.md
+						span.close
+					+e.name Анна Зольд
+					+e.descr успешный форекс-трейдер и&nbsp;талантливый преподаватель
+	// end sWriteNow

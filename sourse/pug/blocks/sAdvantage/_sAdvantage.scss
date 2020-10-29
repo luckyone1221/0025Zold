@@ -1,0 +1,138 @@
+// start .sAdvantage
+.sAdvantage {
+	background-color: $primary;
+	color: $white;
+
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(30)};
+		--sPB: #{rem(30)};
+		--sTPB: #{rem(50)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: #{0};
+		margin-top: -2px;
+	}
+
+	.section-title{
+		@extend .has-top-before-frame;
+		&:before{
+			margin-bottom: rem(20);
+		}
+		p, h2{
+			font-size: rem(22px);
+			@include media-breakpoint-up(md){
+				font-size: rem(24px);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(30px);
+			}
+			line-height: 1.5;
+
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+		p{
+			letter-spacing: rem(1.5px);
+			@include media-breakpoint-up(sm){
+				letter-spacing: rem(2px);
+			}
+			@include media-breakpoint-up(xl){
+				letter-spacing: rem(3px);
+			}
+		}
+		h2{
+			letter-spacing: rem(2px);
+			@include media-breakpoint-up(sm){
+				letter-spacing: rem(2.5px);
+			}
+			@include media-breakpoint-up(xl){
+				letter-spacing: rem(3.5px);
+			}
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(xl){
+			@include roww(40px);
+		}
+	}
+
+	&__l-col{
+		position: relative;
+		z-index: 2;
+	}
+	//item
+	&__item{
+		margin-bottom: rem(41);
+	}
+	&__title{
+		padding: 3px rem(10px);
+		background: $primary-light2;
+		display: inline-block;
+		width: auto;
+		vertical-align: top;
+		margin-bottom: 24px;
+
+		//txt
+		font-weight: bold;
+		color: $green;
+
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			top: calc(100% + 10.5px);
+			left: 0;
+			width: 89px;
+			height: 3px;
+			background-color: $green;
+		}
+	}
+	&__txt{
+		font-size: rem(14px);
+		line-height: 1.8;
+	}
+
+	&__img-col{
+		position: relative;
+		z-index: 1;
+	}
+	&__img{
+		display: block;
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			top: 0;
+			display: flex;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			left: -20%;
+			width: 145%;
+		}
+		@include media-breakpoint-up(xl){
+			display: block;
+			height: auto;
+			top: 31px;
+			left: -110px;
+			width: 145%;
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__r-col{
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(lg){
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sAdvantage

@@ -1,0 +1,27 @@
+mixin sLook(data)
+	// start sLook
+	+b.SECTION.sLook.section#sLook&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Смотрите, что говорят участники первого потока тренинга!
+			+e.items
+				- for (var i = 1; i < 7 ;i++)
+					+lookItem(i)
+				+BigLookItem(7,8)
+				+BigLookItem(9,10)
+				- for (var i = 11; i < 18 ;i++)
+					+lookItem(i)
+
+	// end sLook
+mixin BigLookItem(...items)
+	+e.item--big&attributes(attributes)
+		- for (var i = 0; i < items.length; i++)
+			+e.link(href=`img/@2x/look-item-${items[i]}.png` data-fancybox="lookImgs")
+				+e.img
+					img(loading="lazy" src=`img/@2x/look-item-${items[i]}.png` alt="")
+
+mixin lookItem(imgNum)
+	+e.item(href=`img/@2x/look-item-${imgNum}.png` data-fancybox="lookImgs")
+		+e.img
+			img(loading="lazy" src=`img/@2x/look-item-${imgNum}.png` alt="")
+

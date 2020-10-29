@@ -1,0 +1,13 @@
+mixin sFeedBack(data)
+	// start sFeedBack
+	+b.SECTION.sFeedBack.section#sFeedBack&attributes(attributes)
+		.container
+			+e.row
+				+b.section-title
+					h2 “Я научился торговать! И это благодаря Вам, Анна!”
+					p Олег Осипенко
+				+e.img-col
+					+e.img
+						+e.A.img-inner(href="img/@2x/feedback-img.png" data-fancybox="feedbackImg")
+							img(loading="lazy" src="img/@2x/feedback-img.png" alt="")
+	// end sFeedBack

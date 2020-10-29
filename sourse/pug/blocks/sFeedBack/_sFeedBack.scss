@@ -1,0 +1,96 @@
+// start .sFeedBack
+.sFeedBack {
+	position: relative;
+	z-index: 2;
+	background-color: $primary;
+	color: $white;
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(54px)};
+		--sPB: #{rem(30)};
+		--sTPB: #{rem(63)};
+	}
+
+	&__row{
+		@include media-breakpoint-up(lg){
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+
+	.section-title{
+		@extend .has-top-before-frame;
+
+		//
+		flex-shrink: 0;
+		@include media-breakpoint-up(lg){
+			width: 310px;
+			margin-right: rem(20);
+		}
+		@include media-breakpoint-up(xl){
+			width: rem(360px);
+			margin-right: rem(43);
+		}
+
+		h2{
+			font-size: rem(20px);
+			letter-spacing: rem(1.5);
+			@include media-breakpoint-up(md){
+				font-size: rem(24px);
+				letter-spacing: rem(3);
+			}
+			margin-bottom: rem(25);
+			@include media-breakpoint-up(xl){
+				font-size: rem(30px);
+				margin-bottom: rem(25);
+			}
+			line-height: 1.5;
+			text-transform: uppercase;
+		}
+		p{
+			font-weight: bold;
+			line-height: 1.5;
+		}
+	}
+	&__img-col{
+		flex-grow: 1;
+	}
+	&__img{
+		background-color: $white;
+		box-shadow: 0 rem(26px) rem(46px) rgba(46, 59, 94, 0.69);
+		border-radius: 10px;
+		overflow: hidden;
+
+		width: 100%;
+		position: relative;
+		height: 0;
+		padding-top: (461/757) * 100%;
+		@include mt();
+		&:hover{
+			transform: scale(1.01);
+			box-shadow: 0 rem(26px) rem(60px) rgba(46, 59, 94, 0.69);
+		}
+	}
+	&__img-inner{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 96%;
+			max-height: 96%;
+
+			@include media-breakpoint-up(xl){
+				transform: translateY(-5px);
+			}
+		}
+	}
+	&__{}
+} // end.sFeedBack
