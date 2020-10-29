@@ -16,7 +16,9 @@ mixin sQuestion(data)
 				+b.section-title
 					h2 Хотите стать трейдером за 1 вечер?
 				+e.timer-col
-					+b.timer-box.timer-box-js
+					.time__block
+						.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5')
+					//-+b.timer-box.timer-box-js
 						span.days 12
 						span.hours 20
 						span.minutes 20

@@ -21,7 +21,9 @@ mixin sWant(data)
 							br.d-none.d-md-block
 							| так же?
 				+e.timer-col.col-md-7
-					+b.timer-box.timer-box-js
+					.time__block
+						.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5')
+					//-+b.timer-box.timer-box-js
 						span.days 12
 						span.hours 20
 						span.minutes 20

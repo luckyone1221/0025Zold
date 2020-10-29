@@ -394,9 +394,20 @@ function eventHandler() {
 	});
 	//sProggramm
 	$('.prog-item-js').click(function (){
-		$(this).toggleClass('active');
-		$(this.parentElement).find('.prog-content-js').slideToggle(function (){
-			$(this).toggleClass('active');
+		let self = this;
+		$('.prog-item-js').each(function (){
+			if (this === self){
+				$(this).toggleClass('active');
+				$(this.parentElement).find('.prog-content-js').slideToggle(function (){
+					$(this).toggleClass('active');
+				});
+			}
+			else{
+				$(this).removeClass('active');
+				$(this.parentElement).find('.prog-content-js').slideUp(function (){
+					$(this).removeClass('active');
+				});
+			}
 		});
 	});
 
@@ -411,3 +422,5 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+//localStorage.clear();

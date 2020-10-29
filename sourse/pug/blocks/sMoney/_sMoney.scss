@@ -209,15 +209,23 @@
 			margin-left: -10px;
 		}
 	}
-	.timer-box{
-		justify-content: center;
+
+	.time__block{
+		//justify-content: center;
 		margin-bottom: rem(30);
 		@include media-breakpoint-up(lg){
 			margin-bottom: 0;
-			width: auto;
-			justify-content: flex-start;
 		}
 	}
+	//.timer-box{
+	//	justify-content: center;
+	//	margin-bottom: rem(30);
+	//	@include media-breakpoint-up(lg){
+	//		margin-bottom: 0;
+	//		width: auto;
+	//		justify-content: flex-start;
+	//	}
+	//}
 	&__btn{
 		@extend .btn-success-frame;
 

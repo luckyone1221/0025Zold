@@ -16,7 +16,9 @@ mixin sMainThings(data)
 				p Онлайн-курс «Стань трейдером» – это очень простой подход к заработку на FOREX. Он доступен абсолютно всем, независимо от пола, возраста, профессии, умственных способностей и какой-либо подготовки.
 			+e.readout-cont
 				+e.btn.lb_target(type="button")  Получить бесплатный доступ
-				+b.timer-box.timer-box-js
+				.time__block
+					.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5')
+				//-+b.timer-box.timer-box-js
 					span.days 12
 					span.hours 20
 					span.minutes 20

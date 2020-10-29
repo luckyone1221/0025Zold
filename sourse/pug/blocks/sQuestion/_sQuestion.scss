@@ -153,13 +153,16 @@
 			width: rem(420px);
 		}
 	}
-	.timer-box{
-		justify-content: center;
-
-		@include media-breakpoint-up(lg){
-			margin-bottom: 52px;
-		}
+	.time__block{
+		margin-bottom: rem(25);
 	}
+	//.timer-box{
+	//	justify-content: center;
+	//
+	//	@include media-breakpoint-up(lg){
+	//		margin-bottom: 52px;
+	//	}
+	//}
 	&__btn-cont{
 		text-align: center;
 		@include media-breakpoint-up(lg){

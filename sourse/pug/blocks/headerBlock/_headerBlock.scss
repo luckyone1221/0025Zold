@@ -206,80 +206,90 @@
 		}
 	}
 	//
-	.timer-box{
-		justify-content: center;
-		@include media-breakpoint-up(sm){
-			justify-content: flex-start;
-		}
-		@include media-breakpoint-up(lg){
-			margin-left: 2px;
-		}
-
-
-		span{
-			width: rem(55px);
-			height: rem(55px);
-			@include media-breakpoint-up(md){
-				width: rem(72px);
-				height: rem(72px);
+	.time__block{
+		.idvd_timer{
+			@include media-breakpoint-up(lg){
+				text-align: left;
 			}
-
-			//txt
-			font-size: rem(30);
-			line-height: rem(55px);
-			@include media-breakpoint-up(md){
-				font-size: rem(40);
-				line-height: rem(72px);
-			}
-
-			//after =>  'дней'
-			&:after{
-				font-size: rem(15);
-				@include media-breakpoint-up(md){
-					font-size: rem(17.274px);
-				}
-				line-height: 167.5%;
-				color: $white;
-			}
-			&.days:after{
-				content: 'дней';
-			}
-			&.hours:after{
-				content: 'часов';
-			}
-			&.minutes:after{
-				content: 'минут';
-			}
-			&.seconds:after{
-				content: 'секунд';
-			}
-			//before => ':'
-
-			&:before{
-				content: ':';
-				position: absolute;
-				left: 100%;
-				top: 0;
-				height: 100%;
-				width: rem(18);
-
-				//
-				display: flex;
-				text-align: center;
-				justify-content: center;
-				align-items: center;
-
-				//font-family: $gotham-pro;
-				font-size: rem(40);
-				color: $white;
-			}
-
-			&:first-child:before, &:last-child:before{
-				content: none;
-			}
-
 		}
 	}
+
+
+	//
+	//.timer-box{
+	//	justify-content: center;
+	//	@include media-breakpoint-up(sm){
+	//		justify-content: flex-start;
+	//	}
+	//	@include media-breakpoint-up(lg){
+	//		margin-left: 2px;
+	//	}
+	//
+	//
+	//	span{
+	//		width: rem(55px);
+	//		height: rem(55px);
+	//		@include media-breakpoint-up(md){
+	//			width: rem(72px);
+	//			height: rem(72px);
+	//		}
+	//
+	//		//txt
+	//		font-size: rem(30);
+	//		line-height: rem(55px);
+	//		@include media-breakpoint-up(md){
+	//			font-size: rem(40);
+	//			line-height: rem(72px);
+	//		}
+	//
+	//		//after =>  'дней'
+	//		&:after{
+	//			font-size: rem(15);
+	//			@include media-breakpoint-up(md){
+	//				font-size: rem(17.274px);
+	//			}
+	//			line-height: 167.5%;
+	//			color: $white;
+	//		}
+	//		&.days:after{
+	//			content: 'дней';
+	//		}
+	//		&.hours:after{
+	//			content: 'часов';
+	//		}
+	//		&.minutes:after{
+	//			content: 'минут';
+	//		}
+	//		&.seconds:after{
+	//			content: 'секунд';
+	//		}
+	//		//before => ':'
+	//
+	//		&:before{
+	//			content: ':';
+	//			position: absolute;
+	//			left: 100%;
+	//			top: 0;
+	//			height: 100%;
+	//			width: rem(18);
+	//
+	//			//
+	//			display: flex;
+	//			text-align: center;
+	//			justify-content: center;
+	//			align-items: center;
+	//
+	//			//font-family: $gotham-pro;
+	//			font-size: rem(40);
+	//			color: $white;
+	//		}
+	//
+	//		&:first-child:before, &:last-child:before{
+	//			content: none;
+	//		}
+	//
+	//	}
+	//}
 
 	&__{}
 	&__{}
@@ -289,73 +299,19 @@
 	&__{}
 }
 
-.timer-box{
-	display: flex;
-
-	padding-bottom: rem(50);
-	@include media-breakpoint-up(lg){
-		//padding-top: rem(45px);
-		padding-bottom: 0;
-		width: 100%;
-		justify-content: flex-start;
-	}
-	span{
+//new timer
+.time__block{
+	.tmr_el{
+		//background-color: red!important;
+		width: auto;
 		position: relative;
-		width: rem(72px);
-		height: rem(72px);
-		background: $white;
-		border-radius: rem(10px);
-
-		//txt
-		//font-family: $gotham-pro;
-		font-size: rem(40);
-		color: darken($primary, 15);
-		line-height: rem(72px);
-		text-align: center;
-
-		//margin
-		&:first-child{
-			margin-right: rem(28);
-		}
 		margin-right: rem(18);
-		&:last-child{
-			margin-right: 0;
-		}
-
-		//after =>  'дней'
-		&:after{
-			position: absolute;
-			display: block;
-			left: 0;
-			top: 100%;
-			width: 100%;
-
-			text-align: center;
-			//font-family: $gotham-pro;
-			font-size: rem(17.274px);
-			line-height: 167.5%;
-			color: $white;
-		}
-		&.days:after{
-			content: 'дней';
-		}
-		&.hours:after{
-			content: 'часов';
-		}
-		&.minutes:after{
-			content: 'минут';
-		}
-		&.seconds:after{
-			content: 'секунд';
-		}
-		//before => ':'
-
 		&:before{
 			content: ':';
 			position: absolute;
 			left: 100%;
 			top: 0;
-			height: 100%;
+			height: auto;
 			width: rem(18);
 
 			//
@@ -374,6 +330,116 @@
 		}
 
 	}
+	.tmr_el_val{
+		width: rem(68);
+		height: rem(68);
+		line-height: rem(68);
+		font-size: rem(35);
+		@include media-breakpoint-up(sm){
+			width: rem(72);
+			height: rem(72);
+			line-height: rem(72);
+			font-size: rem(40);
+		}
+
+		background: $white;
+		border-radius: rem(10px);
+		color: $blue;
+		padding: 0;
+		font-weight: 400;
+
+	}
+	.tmr_el_unit{
+
+	}
+
 }
+
+//.timer-box{
+//	display: flex;
+//
+//	padding-bottom: rem(50);
+//	@include media-breakpoint-up(lg){
+//		//padding-top: rem(45px);
+//		padding-bottom: 0;
+//		width: 100%;
+//		justify-content: flex-start;
+//	}
+//	span{
+//		position: relative;
+//		width: rem(72px);
+//		height: rem(72px);
+//		background: $white;
+//		border-radius: rem(10px);
+//
+//		//txt
+//		//font-family: $gotham-pro;
+//		font-size: rem(40);
+//		color: darken($primary, 15);
+//		line-height: rem(72px);
+//		text-align: center;
+//
+//		//margin
+//		&:first-child{
+//			margin-right: rem(28);
+//		}
+//		margin-right: rem(18);
+//		&:last-child{
+//			margin-right: 0;
+//		}
+//
+//		//after =>  'дней'
+//		&:after{
+//			position: absolute;
+//			display: block;
+//			left: 0;
+//			top: 100%;
+//			width: 100%;
+//
+//			text-align: center;
+//			//font-family: $gotham-pro;
+//			font-size: rem(17.274px);
+//			line-height: 167.5%;
+//			color: $white;
+//		}
+//		&.days:after{
+//			content: 'дней';
+//		}
+//		&.hours:after{
+//			content: 'часов';
+//		}
+//		&.minutes:after{
+//			content: 'минут';
+//		}
+//		&.seconds:after{
+//			content: 'секунд';
+//		}
+//		//before => ':'
+//
+//		&:before{
+//			content: ':';
+//			position: absolute;
+//			left: 100%;
+//			top: 0;
+//			height: 100%;
+//			width: rem(18);
+//
+//			//
+//			display: flex;
+//			text-align: center;
+//			justify-content: center;
+//			align-items: center;
+//
+//			//font-family: $gotham-pro;
+//			font-size: rem(40);
+//			color: $white;
+//		}
+//
+//		&:first-child:before, &:last-child:before{
+//			content: none;
+//		}
+//
+//	}
+//}
 
 // end.headerBlock

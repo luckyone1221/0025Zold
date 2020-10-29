@@ -29,9 +29,12 @@ mixin sMoney(data)
 								| день!
 				+e.video-col.col-lg-7
 					+e.txt В течение дня Анна периодически записывает на видео сделки, которые совершает. В этом ролике наглядно показан обычный торговый день. Спустя несколько месяцев вдумчивой практики Вы имеете шанс приблизиться к этим цифрам:
-					+videoLink()
+					+videoLink('447066839')
+						img(loading="lazy" src="img/@2x/money-v-bg.jpg" alt="")
 			+e.lower-row
-				+b.timer-box.timer-box-js
+				.time__block
+					.idvd_timer.autostart(data-redirect_url='', data-duration_hours='36.5')
+				//-+b.timer-box.timer-box-js
 					span.days 12
 					span.hours 20
 					span.minutes 20
@@ -42,5 +45,8 @@ mixin sMoney(data)
 mixin videoLink(a='458067420')
 	+b.video-box
 		+e.link(data-src=`<iframe src="https://player.vimeo.com/video/${a}?autoplay=1&loop=1&autopause=0" loading="lazy" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`)
-			img(loading="lazy" src="img/@2x/video-bg.jpg" alt="")
+			if block
+				block
+			else
+				img(loading="lazy" src="img/@2x/video-bg.jpg" alt="")
 			//- <iframe width="560" height="315" src="https://www.youtube.com/embed/mbcP3Oc0PjU?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
