@@ -15,11 +15,11 @@
 html{
 	// overflow-x: hidden;
 	-webkit-text-size-adjust: none;
-	overflow-x: hidden;
-	overflow-y: auto;
-	&.fixed{
-		overflow: hidden;
-	}
+	// overflow-x: hidden;
+	// overflow-y: auto;
+	// &.fixed{
+	// 	overflow: hidden;
+	// }
 }
 body,
 html {
@@ -65,15 +65,15 @@ body {
 		}
 	}
 }
-// .main-wrapper { 
-// 	// overflow-x: hidden;
-// 	// overflow: scroll;
-// 	// width: 100%; 
-// 	  height: 100vh;
-// 		height: calc(var(--vh, 1vh) * 100);
+.main-wrapper { 
+	overflow-x: hidden;
+	// overflow: scroll;
+	// width: 100%; 
+	  // height: 100vh;
+		// height: calc(var(--vh, 1vh) * 100);
 	 
 	 
-// }
+}
  
 
  
@@ -440,3 +440,11 @@ iframe {
 	}
 }
 
+
+
+@media (max-width: 980px) {
+
+	.leadbox_window .ld_close {
+		display: block !important;
+	}
+}

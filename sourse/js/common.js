@@ -27,10 +27,10 @@ const JSCCommon = {
 				},
 			},
 			beforeLoad: function () {
-				document.querySelector("html").classList.add("fixed")
+				// document.querySelector("html").classList.add("fixed")
 			},
 			afterClose: function () {
-				document.querySelector("html").classList.remove("fixed")
+				// document.querySelector("html").classList.remove("fixed")
 			},
 		});
 		$(".modal-close-js").click(function () {
@@ -401,6 +401,10 @@ function eventHandler() {
 	});
 
 	//end juckyone js
+
+	$(".video-box__link ").click(function () {
+		$(this).addClass('active').html($(this).data('src'))
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

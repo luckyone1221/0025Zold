@@ -38,11 +38,9 @@ var JSCCommon = {
 
 				}
 			},
-			beforeLoad: function beforeLoad() {
-				document.querySelector("html").classList.add("fixed");
+			beforeLoad: function beforeLoad() {// document.querySelector("html").classList.add("fixed")
 			},
-			afterClose: function afterClose() {
-				document.querySelector("html").classList.remove("fixed");
+			afterClose: function afterClose() {// document.querySelector("html").classList.remove("fixed")
 			}
 		});
 		$(".modal-close-js").click(function () {
@@ -407,6 +405,10 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	}); //end juckyone js
+
+	$(".video-box__link ").click(function () {
+		$(this).addClass('active').html($(this).data('src'));
+	});
 }
 
 ;

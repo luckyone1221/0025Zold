@@ -8,27 +8,38 @@ mixin footer()
 						+e.A.logo(href='#')
 							img(loading="lazy" src="img/svg/footer-logo.svg" alt="")
 						+e.logo-links
-							span 2008—2020 © издательство Info-DVD.Ru
-							a(href='#') Проект «Инфоклуб»
-							a(href='#') ОГРНИП 316183200118945
+							span 
+								script.
+									function InfoDVDCurrentYear(year) {
+										var cur = new Date();
+										if (cur.getFullYear() != year)
+											document.write(year + '&mdash;' + cur.getFullYear());
+										else document.write(year);
+									}
+
+									InfoDVDCurrentYear('2008');
+								| 	 © издательство 
+								a.text-white(href='//www.info-dvd.ru/?utm_source=footer_link') Info-DVD.Ru
+							a.text-white(href='//www.infoclub.info/') Проект «Инфоклуб» 
+							script(src='//info-dvd.ru/codes/js/legal.utf8.js')
 					//-2
 					+e.links-bl
-						a(href="#") партнёрская программа
-						a(href="#") политика конфиденциальности
-						a(href="#") предупреждение о рисках
+						a(href='//info-dvd.ru/about/partnership', target='_blank', title='партнёрская программа') партнёрская программа
+						a(href='//info-dvd.ru/pages/privacy', target='_blank', title='политика конфиденциальности') политика конфиденциальности
+						a(href='//info-dvd.ru/pages/risk-warning', target='_blank', title='предупреждение о рисках')   предупреждение о рисках
 				+e.contacts-col.col-lg-5.col-xl-4
 					+e.c-item
 						+e.title Служба поддержки:
 						+e.cont-links
-							a(href="#") Задать свой вопрос
-							a(href="#") Частые вопросы и ответы на них
+							a(href='//info.support-desk.ru/form', target='_blank', title='Задать свой вопрос')  Задать свой вопрос
+							a(href='//info.support-desk.ru/?base=1', title='Частые вопросы и ответы на них') Частые вопросы и ответы на них
 					+e.c-item
 						+e.title Позвоните нам:
 						+e.inline-links
-							a(href='tel:88005550721') 8 (800) 555-07-21
-							a(href='tel:+74995530974') +7 (499) 553-09-74
+							span
+								script(   src='//info-dvd.ru/codes/js/telephone-number.js')
 						+e.callback-txt
 							| или и
 							|
-							a(href='http://info-dvd.ru/support/apply/') мы вам перезвоним
+							a(href='//info-dvd.ru/support/apply/', target='_blank') мы вам перезвоним
 
