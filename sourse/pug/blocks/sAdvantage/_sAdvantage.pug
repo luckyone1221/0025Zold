@@ -14,7 +14,8 @@ mixin sAdvantage(data)
 					+advantageItem('Практические задания')
 						| Забудьте про скучную теорию. Абсолютно всё, что Вы узнаете на курсе, Вы будете тут же применять на практике. Выполняйте простые задания и двигайтесь дальше.
 				+e.img-col.col-lg-4
-					+e.img
+					+pic('book-img.png')(class="sAdvantage__img")
+					//-+e.img
 						img(loading='lazy' src="img/@2x/book-img.png" alt="")
 				+e.r-col.col-lg-4
 					+advantageItem('Пошаговый алгоритм')

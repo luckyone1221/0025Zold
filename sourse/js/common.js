@@ -13,7 +13,6 @@ const $ = jQuery;
 function eventHandler() {
 	JSCCommon.ifie();
 	//luckyone js
-
 	//top slider
 
 	let topSlider = new Swiper('.top-slider-js', {

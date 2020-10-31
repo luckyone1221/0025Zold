@@ -4,11 +4,13 @@ mixin headerBlock()
 		+pic('header-big-bg.jpg')(class="headerBlock__big-bg")
 		+e.top-bg
 			img(src="img/svg/header-top-bg.svg" alt="")
-		+e.pc-img.d-none.d-xl-block
+		+pic('header-desctop-pc2.png')(class="headerBlock__pc-img d-none d-xl-block")
+		//-+e.pc-img.d-none.d-xl-block
 			img(src="img/@2x/header-desctop-pc2.png" alt="")
 		+e.container.container
 			+e.row
-				+e.mob-pc.d-none.d-lg-flex.d-xl-none
+				+pic('pc-transparent.png')(class="headerBlock__mob-pc d-none d-lg-flex d-xl-none")
+				//-+e.mob-pc.d-none.d-lg-flex.d-xl-none
 					img(src="img/@2x/pc-transparent.png" alt="")
 				+e.content
 					+b.section-title
@@ -24,7 +26,8 @@ mixin headerBlock()
 							| за 1 вечер
 						p Введите емейл и получите пошаговый онлайн-курс, который помог сотням простых домохозяек, пенсионеров, крупных бизнесменов и чиновников научиться зарабатывать на FOREX
 					+e.lower-cont
-						+e.xs-mob-pc.d-lg-none
+						+pic('pc-transparent.png')(class="headerBlock__xs-mob-pc d-lg-none")
+						//-+e.xs-mob-pc.d-lg-none
 							img(src="img/@2x/pc-transparent.png" alt="")
 						+e.btn-and-time
 							+e.btn-cont
