@@ -20,5 +20,6 @@ mixin sTopSlider(data)
 mixin topSlide(imgNum)
 	.swiper-slide
 		+e.img-cont(href=`img/@2x/top-slider-${imgNum}.png` data-fancybox="topSliderImgs")
-			+e.img
+			+e.PICTURE.img
+				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/top-slider-${imgNum}.webp` type="image/webp")
 				img.swiper-lazy(src="#" data-src=`img/@2x/top-slider-${imgNum}.png` alt="")
