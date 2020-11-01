@@ -9,7 +9,7 @@ mixin headerBlock()
 			img(src="img/@2x/header-desctop-pc2.png" alt="")
 		+e.container.container
 			+e.row
-				+pic('pc-transparent.png','',0)(class="headerBlock__mob-pc d-none d-lg-flex d-xl-none")
+				//- +pic('pc-transparent.png','',0)(class="headerBlock__mob-pc d-none d-lg-flex d-xl-none")
 				//-+e.mob-pc.d-none.d-lg-flex.d-xl-none
 					img(src="img/@2x/pc-transparent.png" alt="")
 				+e.content
@@ -26,7 +26,7 @@ mixin headerBlock()
 							| за 1 вечер
 						p Введите емейл и получите пошаговый онлайн-курс, который помог сотням простых домохозяек, пенсионеров, крупных бизнесменов и чиновников научиться зарабатывать на FOREX
 					+e.lower-cont
-						+pic('pc-transparent.png','',0)(class="headerBlock__xs-mob-pc d-lg-none")
+						+pic('pc-transparent.png','',0)(class="headerBlock__xs-mob-pc d-xl-none")
 						//-+e.xs-mob-pc.d-lg-none
 							img(src="img/@2x/pc-transparent.png" alt="")
 						+e.btn-and-time
