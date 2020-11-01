@@ -15,8 +15,9 @@ mixin sAuthor(data)
 							br
 							| и талантливый преподаватель
 					+e.img
-						+pic('about-portrait.png')
-						//- img(loading="lazy" src="img/@2x/about-portrait.png" alt="")
+						picture 
+							source(srcset='img/@1x/webp/about-portrait.webp' type='image/webp')
+							img(src='img/@2x/about-portrait.png' loading='lazy' alt='')
 				+e.txt
 					p
 						b 13 лет
