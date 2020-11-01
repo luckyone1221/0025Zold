@@ -3,7 +3,7 @@ $default-font: "roboto";
 $addr: '../fonts/';
 $file-format: woff2;
 
-@include font-face ($default-font, $addr + "Montserrat-Light", 300, $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "Montserrat-Light", 300, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "Montserrat-Regular", 400, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "Montserrat-Medium", 500, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "Montserrat-SemiBold", 600, $file-formats: $file-format);
