@@ -43,7 +43,7 @@ module.exports = function () {
 			])
 
 			// .pipe($.gp.rigger())
-			// .pipe($.gp.uglify().on('error', function(e) { console.log(e.message) }))
+			.pipe($.gp.uglify().on('error', function(e) { console.log(e.message) }))
 
 			// .pipe($.gp.concat('common.js')
 			.pipe($.babel())

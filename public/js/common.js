@@ -1,65 +1,43 @@
 "use strict";
 
 var JSCCommon = {
-	// /inputMask
 	ifie: function ifie() {
-		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
-		if (isIE11) {
-			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
-		}
+		!!window.MSInputMethodContext && !!document.documentMode && $("body").after('<div class="browsehappy">\t<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 	}
-};
-var $ = jQuery;
+},
+		$ = jQuery;
 
 function eventHandler() {
-	JSCCommon.ifie(); //luckyone js
-	//top slider
-
-	var topSlider = new Swiper('.top-slider-js', {
+	JSCCommon.ifie();
+	new Swiper(".top-slider-js", {
 		spaceBetween: 30,
-		loop: true,
+		loop: !0,
 		lazy: {
-			loadPrevNext: true,
+			loadPrevNext: !0,
 			loadPrevNextAmount: 2
 		},
 		navigation: {
-			prevEl: '.top-sl-prev--js',
-			nextEl: '.top-sl-next--js'
+			prevEl: ".top-sl-prev--js",
+			nextEl: ".top-sl-next--js"
 		},
 		pagination: {
-			el: '.top-sl-pugin--js',
-			type: 'bullets',
-			clickable: true
+			el: ".top-sl-pugin--js",
+			type: "bullets",
+			clickable: !0
 		}
-	}); //sProggramm
-
-	$('.prog-item-js').click(function () {
-		var self = this;
-		$('.prog-item-js').each(function () {
-			if (this === self) {
-				$(this).toggleClass('active');
-				$(this.parentElement).find('.prog-content-js').slideToggle(function () {
-					$(this).toggleClass('active');
-				});
-			} else {
-				$(this).removeClass('active');
-				$(this.parentElement).find('.prog-content-js').slideUp(function () {
-					$(this).removeClass('active');
-				});
-			}
+	});
+	$(".prog-item-js").click(function () {
+		var e = this;
+		$(".prog-item-js").each(function () {
+			this === e ? ($(this).toggleClass("active"), $(this.parentElement).find(".prog-content-js").slideToggle(function () {
+				$(this).toggleClass("active");
+			})) : ($(this).removeClass("active"), $(this.parentElement).find(".prog-content-js").slideUp(function () {
+				$(this).removeClass("active");
+			}));
 		});
-	}); //end juckyone js
-
-	$(".video-box__link ").click(function () {
-		$(this).addClass('active').html($(this).data('src'));
+	}), $(".video-box__link ").click(function () {
+		$(this).addClass("active").html($(this).data("src"));
 	});
 }
 
-;
-
-if (document.readyState !== 'loading') {
-	eventHandler();
-} else {
-	document.addEventListener('DOMContentLoaded', eventHandler);
-} //localStorage.clear();
+"loading" !== document.readyState ? eventHandler() : document.addEventListener("DOMContentLoaded", eventHandler);
