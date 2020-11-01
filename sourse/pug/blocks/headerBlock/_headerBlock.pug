@@ -1,7 +1,7 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		+pic('header-big-bg.jpg')(class="headerBlock__big-bg")
+		+pic('header-big-bg.jpg','bg')(class="headerBlock__big-bg")
 		+e.top-bg
 			img(src="img/svg/header-top-bg.svg" alt="")
 		+pic('header-desctop-pc2.png')(class="headerBlock__pc-img d-none d-xl-block")
@@ -9,7 +9,7 @@ mixin headerBlock()
 			img(src="img/@2x/header-desctop-pc2.png" alt="")
 		+e.container.container
 			+e.row
-				+pic('pc-transparent.png')(class="headerBlock__mob-pc d-none d-lg-flex d-xl-none")
+				+pic('pc-transparent.png','',0)(class="headerBlock__mob-pc d-none d-lg-flex d-xl-none")
 				//-+e.mob-pc.d-none.d-lg-flex.d-xl-none
 					img(src="img/@2x/pc-transparent.png" alt="")
 				+e.content
