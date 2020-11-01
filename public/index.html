@@ -20,14 +20,11 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
-		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/><link rel="stylesheet" href="//infoclub.info/tools/api_subscriber/timer.css"/>
-<link rel="stylesheet" media="all" href="//info-dvd.ru/tools/lead_box/lead_box.css"/>
 		<link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
 		<link rel="preload" href="fonts/Montserrat-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
 		<link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
 		<link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-		<link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+		<link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="stylesheet" href="//infoclub.info/tools/api_subscriber/timer.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body> 
@@ -40,17 +37,14 @@
 					<source srcset="img/@1x/webp/header-big-bg.webp" type="image/webp"/>
 					<source srcset="img/@2x/header-big-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
 					<source srcset="img/@1x/header-big-bg.jpg" type="image/jpg"/>
-					<noscript class="loading-lazy"><img src="img/@2x/header-big-bg.jpg" alt=""/></noscript>
+					<noscript class="loading-lazy"><img class="object-fit-js" src="img/@2x/header-big-bg.jpg" alt=""/></noscript>
 				</picture>
 				<!-- /picture-->
 				<div class="headerBlock__top-bg"><img src="img/svg/header-top-bg.svg" alt=""/>
 				</div>
 				<!-- picture-->
 				<picture class="headerBlock__pc-img d-none d-xl-block"> 
-					<source srcset="img/@2x/webp/header-desctop-pc2.webp" type="image/webp" media="(min-width:576px)"/>
-					<source srcset="img/@1x/webp/header-desctop-pc2.webp" type="image/webp"/>
-					<source srcset="img/@2x/header-desctop-pc2.png" type="image/png" media="(min-width:576px)"/>
-					<source srcset="img/@1x/header-desctop-pc2.png" type="image/png"/>
+					<source srcset="img/@2x/webp/header-desctop-pc2.webp" type="image/webp"/>
 					<noscript class="loading-lazy"><img src="img/@2x/header-desctop-pc2.png" alt=""/></noscript>
 				</picture>
 				<!-- /picture-->
@@ -58,10 +52,7 @@
 					<div class="headerBlock__row">
 						<!-- picture-->
 						<picture class="headerBlock__mob-pc d-none d-lg-flex d-xl-none"> 
-							<source srcset="img/@2x/webp/pc-transparent.webp" type="image/webp" media="(min-width:576px)"/>
-							<source srcset="img/@1x/webp/pc-transparent.webp" type="image/webp"/>
-							<source srcset="img/@2x/pc-transparent.png" type="image/png" media="(min-width:576px)"/>
-							<source srcset="img/@1x/pc-transparent.png" type="image/png"/>
+							<source srcset="img/@2x/webp/pc-transparent.webp" type="image/webp"/>
 							<noscript class="loading-lazy"><img src="img/@2x/pc-transparent.png" alt=""/></noscript>
 						</picture>
 						<!-- /picture-->
@@ -77,10 +68,7 @@
 							<div class="headerBlock__lower-cont">
 								<!-- picture-->
 								<picture class="headerBlock__xs-mob-pc d-lg-none"> 
-									<source srcset="img/@2x/webp/pc-transparent.webp" type="image/webp" media="(min-width:576px)"/>
-									<source srcset="img/@1x/webp/pc-transparent.webp" type="image/webp"/>
-									<source srcset="img/@2x/pc-transparent.png" type="image/png" media="(min-width:576px)"/>
-									<source srcset="img/@1x/pc-transparent.png" type="image/png"/>
+									<source srcset="img/@2x/webp/pc-transparent.webp" type="image/webp"/>
 									<noscript class="loading-lazy"><img src="img/@2x/pc-transparent.png" alt=""/></noscript>
 								</picture>
 								<!-- /picture-->
@@ -633,7 +621,13 @@
 							</div>
 							<div class="sGain__video-col">
 								<div class="video-box">
-									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444286477?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;"><img loading="lazy" src="img/@2x/feedback-v-bg-1.jpg" alt=""/>
+									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444286477?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/feedback-v-bg-1.webp" type="image/webp"/>
+											<noscript class="loading-lazy"><img src="img/@2x/feedback-v-bg-1.jpg" alt=""/></noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -658,7 +652,13 @@
 							</div>
 							<div class="sGain__video-col">
 								<div class="video-box">
-									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/446609758?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;"><img loading="lazy" src="img/@2x/feedback-v-bg-2.jpg" alt=""/>
+									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/446609758?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/feedback-v-bg-2.webp" type="image/webp"/>
+											<noscript class="loading-lazy"><img src="img/@2x/feedback-v-bg-2.jpg" alt=""/></noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -683,7 +683,13 @@
 							</div>
 							<div class="sGain__video-col">
 								<div class="video-box">
-									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444269061?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;"><img loading="lazy" src="img/@2x/feedback-v-bg-3.jpg" alt=""/>
+									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444269061?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/feedback-v-bg-3.webp" type="image/webp"/>
+											<noscript class="loading-lazy"><img src="img/@2x/feedback-v-bg-3.jpg" alt=""/></noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -704,7 +710,13 @@
 							</div>
 							<div class="sGain__video-col">
 								<div class="video-box">
-									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444278392?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;"><img loading="lazy" src="img/@2x/feedback-v-bg-4.jpg" alt=""/>
+									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444278392?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/feedback-v-bg-4.webp" type="image/webp"/>
+											<noscript class="loading-lazy"><img src="img/@2x/feedback-v-bg-4.jpg" alt=""/></noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -724,7 +736,13 @@
 							</div>
 							<div class="sGain__video-col">
 								<div class="video-box">
-									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/446592846?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;"><img loading="lazy" src="img/@2x/feedback-v-bg-5.jpg" alt=""/>
+									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/446592846?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/feedback-v-bg-5.webp" type="image/webp"/>
+											<noscript class="loading-lazy"><img src="img/@2x/feedback-v-bg-5.jpg" alt=""/></noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -746,7 +764,13 @@
 							</div>
 							<div class="sGain__video-col">
 								<div class="video-box">
-									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444280971?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;"><img loading="lazy" src="img/@2x/feedback-v-bg-6.jpg" alt=""/>
+									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444280971?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/feedback-v-bg-6.webp" type="image/webp"/>
+											<noscript class="loading-lazy"><img src="img/@2x/feedback-v-bg-6.jpg" alt=""/></noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -768,7 +792,13 @@
 							</div>
 							<div class="sGain__video-col">
 								<div class="video-box">
-									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444305802?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;"><img loading="lazy" src="img/@2x/feedback-v-bg-7.jpg" alt=""/>
+									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/444305802?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/feedback-v-bg-7.webp" type="image/webp"/>
+											<noscript class="loading-lazy"><img src="img/@2x/feedback-v-bg-7.jpg" alt=""/></noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -792,7 +822,13 @@
 							</div>
 							<div class="sGain__video-col">
 								<div class="video-box">
-									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/446614698?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;"><img loading="lazy" src="img/@2x/feedback-v-bg-8.jpg" alt=""/>
+									<div class="video-box__link" data-src="&lt;iframe src=&quot;https://player.vimeo.com/video/446614698?autoplay=1&amp;loop=1&amp;autopause=0&quot; loading=&quot;lazy&quot; width=&quot;800&quot; height=&quot;450&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/feedback-v-bg-8.webp" type="image/webp"/>
+											<noscript class="loading-lazy"><img src="img/@2x/feedback-v-bg-8.jpg" alt=""/></noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -810,11 +846,128 @@
 					<div class="section-title">
 						<h2>Смотрите, что говорят участники первого потока тренинга!</h2>
 					</div>
-					<div class="sLook__items"><a class="sLook__item" href="img/@2x/look-item-1.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-1.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-2.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-2.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-3.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-3.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-4.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-4.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-5.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-5.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-6.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-6.png" alt=""/></span></a>
+					<div class="sLook__items"><a class="sLook__item" href="img/@2x/look-item-1.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-1.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-1.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-1.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-1.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-1.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-2.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-2.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-2.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-2.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-2.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-2.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-3.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-3.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-3.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-3.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-3.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-3.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-4.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-4.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-4.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-4.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-4.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-4.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-5.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-5.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-5.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-5.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-5.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-5.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-6.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-6.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-6.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-6.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-6.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-6.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a>
 						<div class="sLook__item sLook__item--big"><a class="sLook__link" href="img/@2x/look-item-7.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-7.png" alt=""/></span></a><a class="sLook__link" href="img/@2x/look-item-8.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-8.png" alt=""/></span></a>
 						</div>
 						<div class="sLook__item sLook__item--big"><a class="sLook__link" href="img/@2x/look-item-9.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-9.png" alt=""/></span></a><a class="sLook__link" href="img/@2x/look-item-10.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-10.png" alt=""/></span></a>
-						</div><a class="sLook__item" href="img/@2x/look-item-11.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-11.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-12.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-12.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-13.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-13.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-14.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-14.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-15.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-15.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-16.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-16.png" alt=""/></span></a><a class="sLook__item" href="img/@2x/look-item-17.png" data-fancybox="lookImgs"><span class="sLook__img"><img loading="lazy" src="img/@2x/look-item-17.png" alt=""/></span></a>
+						</div><a class="sLook__item" href="img/@2x/look-item-11.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-11.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-11.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-11.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-11.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-11.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-12.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-12.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-12.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-12.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-12.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-12.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-13.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-13.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-13.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-13.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-13.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-13.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-14.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-14.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-14.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-14.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-14.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-14.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-15.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-15.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-15.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-15.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-15.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-15.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-16.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-16.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-16.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-16.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-16.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-16.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a><a class="sLook__item" href="img/@2x/look-item-17.png" data-fancybox="lookImgs"><span class="sLook__img">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/look-item-17.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/look-item-17.webp" type="image/webp"/>
+							<source srcset="img/@2x/look-item-17.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/look-item-17.png" type="image/png"/>
+							<noscript class="loading-lazy"><img src="img/@2x/look-item-17.png" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></span></a>
 					</div>
 				</div>
 			</section>
@@ -936,6 +1089,8 @@
 		</div>
 		<link rel="stylesheet" media="all" href="//info-dvd.ru/tools/lead_box/lead_box.css"/>
 		<!-- end modals-->
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/><link rel="stylesheet" media="all" href="//info-dvd.ru/tools/lead_box/lead_box.css"/>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<!--script(src="libs/jquery/jquery.min.js")-->
 		<script src="js/jquery-2.2.4.min.js"></script>

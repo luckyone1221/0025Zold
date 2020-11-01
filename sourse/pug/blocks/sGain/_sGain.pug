@@ -82,6 +82,7 @@ mixin gainItem(title, name,a, imgNum)
 				+e.name=name
 			+e.video-col
 				+videoLink(a)
-					img(loading="lazy" src=`img/@2x/feedback-v-bg-${imgNum}.jpg` alt="")
+					+pic(`feedback-v-bg-${imgNum}.jpg`,'',0)
+					//- img(loading="lazy" src=`img/@2x/feedback-v-bg-${imgNum}.jpg` alt="")
 		+e.content
 			block

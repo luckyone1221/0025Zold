@@ -23,5 +23,6 @@ mixin BigLookItem(...items)
 mixin lookItem(imgNum)
 	+e.item(href=`img/@2x/look-item-${imgNum}.png` data-fancybox="lookImgs")
 		+e.img
-			img(loading="lazy" src=`img/@2x/look-item-${imgNum}.png` alt="")
+			+pic(`look-item-${imgNum}.png`)
+			//- img(loading="lazy" src=`img/@2x/look-item-${imgNum}.png` alt="")
 
